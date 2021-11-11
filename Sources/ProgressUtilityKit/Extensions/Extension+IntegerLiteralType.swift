@@ -4,6 +4,7 @@
 //
 //  Created by Ahmed Shendy on 11/11/21.
 //
+import UIKit
 
 extension IntegerLiteralType {
     func toRadians() -> CGFloat {
