@@ -7,13 +7,13 @@
 
 import UIKit
 
-class PUBorderedWipe: UIView {
+public final class PUBorderedWipe: UIView {
     
     // MARK: - Public Settings
     
-    var color: UIColor = UIColor(red: 66, green: 133, blue: 244, alpha: 1)
-    var duration: CFTimeInterval = 10
-    var bind: (() -> Void)?
+    public var color: UIColor = UIColor(red: 66, green: 133, blue: 244, alpha: 1)
+    public var duration: CFTimeInterval = 10
+    public var bind: (() -> Void)?
     
     // MARK: - Properties
     
