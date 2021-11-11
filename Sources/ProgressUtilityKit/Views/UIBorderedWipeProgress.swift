@@ -1,5 +1,5 @@
 //
-//  PUBorderedWipe.swift
+//  UIBorderedWipeProgress.swift
 //
 //
 //  Created by Ahmed Shendy on 11/11/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class PUBorderedWipe: UIView {
+public final class UIBorderedWipeProgress: UIView {
     
     // MARK: - Public API
     
@@ -61,7 +61,7 @@ public final class PUBorderedWipe: UIView {
 
 // MARK: - Build/Animate Layers
 
-extension PUBorderedWipe {
+extension UIBorderedWipeProgress {
     
     public override func layoutSubviews() {
         buildBorderLayer()
@@ -96,8 +96,8 @@ extension PUBorderedWipe {
         let path = UIBezierPath(
             arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
             radius: radius,
-            startAngle: 270.toRadians(),
-            endAngle: (270 - 360).toRadians(),
+            startAngle: CGFloat(270) * CGFloat.pi / 180.0,
+            endAngle: CGFloat(270 - 360) * CGFloat.pi / 180.0,
             clockwise: false
         )
         path.close()
@@ -120,7 +120,7 @@ extension PUBorderedWipe {
 
 // MARK: - CAAnimationDelegate
 
-extension PUBorderedWipe: CAAnimationDelegate {
+extension UIBorderedWipeProgress: CAAnimationDelegate {
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         onFinish?()
     }
