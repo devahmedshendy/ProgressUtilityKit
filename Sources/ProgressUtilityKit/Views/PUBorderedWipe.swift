@@ -12,7 +12,7 @@ public final class PUBorderedWipe: UIView {
     // MARK: - Public API
     
     public var color: UIColor = UIColor(red: 66, green: 133, blue: 244, alpha: 1)
-    public var duration: CFTimeInterval = 10
+    public var duration: Double = 10
     
     public var onFinish: (() -> Void)?
     
