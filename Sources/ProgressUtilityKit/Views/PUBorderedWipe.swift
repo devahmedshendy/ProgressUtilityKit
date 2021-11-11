@@ -11,7 +11,7 @@ public final class PUBorderedWipe: UIView {
     
     // MARK: - Public API
     
-    public var color: UIColor = UIColor(red: 66, green: 133, blue: 244, alpha: 1)
+    public var color: UIColor = UIColor(red: 66/255, green: 133/255, blue: 244/255, alpha: 1)
     public var duration: Double = 10
     
     public var onFinish: (() -> Void)?
