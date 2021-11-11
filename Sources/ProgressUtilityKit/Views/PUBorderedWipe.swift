@@ -14,7 +14,7 @@ public final class PUBorderedWipe: UIView {
     public var color: UIColor = UIColor(red: 66, green: 133, blue: 244, alpha: 1)
     public var duration: CFTimeInterval = 10
     
-    public var onFinish = (() -> Void)?
+    public var onFinish: (() -> Void)?
     
     // MARK: - Properties
     
@@ -122,6 +122,6 @@ extension PUBorderedWipe {
 
 extension PUBorderedWipe: CAAnimationDelegate {
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        onFinish()
+        onFinish?()
     }
 }
