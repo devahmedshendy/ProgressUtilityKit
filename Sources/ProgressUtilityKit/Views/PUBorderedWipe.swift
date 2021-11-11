@@ -62,7 +62,7 @@ public final class PUBorderedWipe: UIView {
 
 extension PUBorderedWipe {
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         buildBorderLayer()
         buildProgressLayer()
         
@@ -120,7 +120,7 @@ extension PUBorderedWipe {
 // MARK: - CAAnimationDelegate
 
 extension PUBorderedWipe: CAAnimationDelegate {
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         bind?()
     }
 }
